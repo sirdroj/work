@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <title>work</title>
+</head>
+<body>
+    <nav> 
+        <h1 id="heading">Work</h1>
+        <ul>
+            <li><a id="nav0" onclick="navfunction('0')">All</a></li>
+            <li><a id="nav1" onclick="navfunction('1')">web development</a></li>
+            <li><a id="nav2" onclick="navfunction('2')">something2</a></li>
+            <li><a id="nav3" onclick="navfunction('3')">something3</a></li>
+            <li><a id="nav4" onclick="navfunction('4')">something4</a></li>
+        </ul>
+    </nav>
+    <hr>
+    <div class="ContentSection" id="sec0">
+        <div class="ContentBox" style="display: block;">
+            <img src="bg1.jpg" alt="">
+            infoCxSd
+        </div>   
+        <div class="ContentBox" style="display: block;">
+            <img src="bg2.jpg" alt="">
+            infoCxSd
+        </div>   
+        <div class="ContentBox" style="display: block;">
+            <img src="bg6.jpg" alt="">
+            infoCxSd
+        </div>   
+        <div class="ContentBox" style="display: block;">
+            <img src="bg7.jpg" alt="">
+            infoCxSd
+        </div>   
+        <div class="ContentBox" style="display: block;">
+            <img src="bg2.jpg" alt="">
+            infoCxSd
+        </div>   
+    </div>
+    <div class="ContentSection" id="sec1" style="display: none;">
+        <div class="ContentBox" style="display: block;">
+            <img src="bg1.jpg" alt="">
+            infoCxSd
+        </div>   
+        <div class="ContentBox" style="display: block;">
+            <img src="bg1.jpg" alt="">
+            infoCxSd
+        </div>   
+        <div class="ContentBox" style="display: block;">
+            <img src="bg1.jpg" alt="">
+            infoCxSd
+        </div>   
+        <div class="ContentBox" style="display: block;">
+            <img src="bg1.jpg" alt="">
+            infoCxSd
+        </div>   
+        <div class="ContentBox" style="display: block;">
+            <img src="bg1.jpg" alt="">
+            infoCxSd
+        </div>   
+    </div>
+    <div class="ContentSection" id="sec2" style="display: none;">
+        <div class="ContentBox">
+            <img src="bg6.jpg" alt="">
+            infoCxSd
+        </div>
+        <div class="ContentBox">
+            <img src="bg6.jpg" alt="">
+            infoCxSd
+        </div>
+        <div class="ContentBox">
+            <img src="bg6.jpg" alt="">
+            infoCxSd
+        </div>
+        <div class="ContentBox">
+            <img src="bg6.jpg" alt="">
+            infoCxSd
+        </div>
+        <div class="ContentBox">
+            <img src="bg6.jpg" alt="">
+            infoCxSd
+        </div>
+    </div>
+    <div class="ContentSection" id="sec3" style="display: none;">
+        <div class="ContentBox">
+            <img src="bg2.jpg" alt="">
+            infoCxSd
+        </div>
+        <div class="ContentBox">
+            <img src="bg2.jpg" alt="">
+            infoCxSd
+        </div>
+        <div class="ContentBox">
+            <img src="bg2.jpg" alt="">
+            infoCxSd
+        </div>
+        <div class="ContentBox">
+            <img src="bg2.jpg" alt="">
+            infoCxSd
+        </div>
+        <div class="ContentBox">
+            <img src="bg2.jpg" alt="">
+            infoCxSd
+        </div>
+    </div>
+    <div class="ContentSection" id="sec4" style="display: none;">
+        <div class="ContentBox">
+            <img src="bg7.jpg" alt="">
+            infoCxSd
+        </div>
+        <div class="ContentBox">
+            <img src="bg7.jpg" alt="">
+            infoCxSd
+        </div>
+        <div class="ContentBox">
+            <img src="bg7.jpg" alt="">
+            infoCxSd
+        </div>
+        <div class="ContentBox">
+            <img src="bg7.jpg" alt="">
+            infoCxSd
+        </div>
+        <div class="ContentBox">
+            <img src="bg7.jpg" alt="">
+            infoCxSd
+        </div>
+    </div>
+    <script>
+        var currentid=document.getElementById("sec0");
+        var currentnav=document.getElementById("nav0");
+        function navfunction(x){
+            idsum=document.getElementById("sec"+x)
+            idsumnav=document.getElementById("nav"+x)
+            currentid.style.display="none";
+            currentnav.style="background-color:rgb(128, 128, 128);"
+            idsum.style+=display="block";
+            idsumnav.style="box-shadow: black 0 0 1px;background-color:rgb(75, 75, 75);;color:white;"
+            currentnav=idsumnav;
+            currentid=idsum;
+        }
+    </script>
+    <style>
+        :root{
+            --activebgcolor:rgb(75, 75, 75);
+        }
+    </style>
+</body>
+</html>
