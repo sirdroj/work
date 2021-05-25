@@ -2,6 +2,7 @@ body{
     font-family: 'Ubuntu', sans-serif;
     margin: 0;
     padding: 0%;
+    height: auto;
 background-image: linear-gradient(to bottom right,rgb(192, 191, 191), white,rgb(109, 109, 109));
 }
 #heading{
@@ -54,11 +55,43 @@ nav ul li a:active{
     }
   
 .ContentSection{
-    position: relative;
+    position: absolute;
+    /* position: relative; */
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    background-image: linear-gradient(to bottom left,rgb(109, 109, 109),white,rgb(192, 191, 191));
+  z-index: -1;
+}
+/* .ContentSection_none{
+    position: absolute;
+    
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    display: none;
+    background-color: aqua;
+  z-index: -1;
+}
+.ContentSection_c{
+    position: absolute;
     right: 50px;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
+    background-color: aqua;
+  z-index: 1;
+} */
+ .ContentSection{
+    animation: hellowboy 0.5s ease-in-out forwards 1;
+}
+@keyframes hellowboy{
+  0%{
+    transform: translateX(100%);
+  }
+  100%{
+    transform: translateX(0%);
+  }
 }
 .ContentBox{
     margin: 22px;
@@ -70,6 +103,7 @@ nav ul li a:active{
     box-shadow: black 0 0 25px;
     width: 354px;
     margin: 20px;
+    transition: 0.25s ease;
 }
 .ContentBox img{
     height:300px;

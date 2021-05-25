@@ -41,7 +41,7 @@
             infoCxSd
         </div>   
     </div>
-    <div class="ContentSection" id="sec1" style="display: none;">
+    <div class="ContentSection" id="sec1" style="display: none;z-index: -1;">
         <div class="ContentBox" style="display: block;">
             <img src="bg1.jpg" alt="">
             infoCxSd
@@ -63,7 +63,7 @@
             infoCxSd
         </div>   
     </div>
-    <div class="ContentSection" id="sec2" style="display: none;">
+    <div class="ContentSection" id="sec2" style="display: none;z-index: -1;">
         <div class="ContentBox">
             <img src="bg6.jpg" alt="">
             infoCxSd
@@ -85,7 +85,7 @@
             infoCxSd
         </div>
     </div>
-    <div class="ContentSection" id="sec3" style="display: none;">
+    <div class="ContentSection" id="sec3" style="display: none;z-index: -1;">
         <div class="ContentBox">
             <img src="bg2.jpg" alt="">
             infoCxSd
@@ -107,7 +107,7 @@
             infoCxSd
         </div>
     </div>
-    <div class="ContentSection" id="sec4" style="display: none;">
+    <div class="ContentSection" id="sec4" style="display: none;z-index: -1;">
         <div class="ContentBox">
             <img src="bg7.jpg" alt="">
             infoCxSd
@@ -129,20 +129,60 @@
             infoCxSd
         </div>
     </div>
-    <script>
+    <!-- <script>
         var currentid=document.getElementById("sec0");
         var currentnav=document.getElementById("nav0");
         function navfunction(x){
             idsum=document.getElementById("sec"+x)
             idsumnav=document.getElementById("nav"+x)
-            currentid.style.display="none";
+
+// $
+
+            currentid.style.zIndex="-1";
             currentnav.style="background-color:rgb(128, 128, 128);"
             idsum.style+=display="block";
-            idsumnav.style="box-shadow: black 0 0 1px;background-color:rgb(75, 75, 75);;color:white;"
+            idsum.style.zIndex="1";
+            idsumnav.style="box-shadow: black 0 0 1px;background-color:rgb(75, 75, 75);color:white;"
             currentnav=idsumnav;
             currentid=idsum;
         }
+    </script> -->
+    <script>
+        var currentid=document.getElementById("sec0");
+        var currentnav=document.getElementById("nav0");
+        var past=document.getElementById("nav3")
+        function navfunction(x){
+            idsum=document.getElementById("sec"+x)
+            idsumnav=document.getElementById("nav"+x)
+            past.style.display="none";
+            currentid.style.zIndex=-1;
+            // currentid.style.display="none";
+            currentnav.style="background-color:rgb(128, 128, 128);"
+            idsum.style+=display="block";
+            idsum.style.zIndex=1;
+            idsumnav.style="box-shadow: black 0 0 1px;background-color:rgb(75, 75, 75);;color:white;"
+            // past.style.display="none";
+            past=currentid;
+            currentnav=idsumnav;
+            currentid=idsum;
+        }
+        
     </script>
+    <!-- <script>
+        var pastcurrent=document.getElementById("sec1");
+        var currentid=document.getElementById("sec0");
+        var currentnav=document.getElementById("nav0");
+        function navfunction(x){
+           pastcurrent.classList.remove("ContentSection")
+           pastcurrent.classList.add("ContentSection_none")
+           pastcurrent=currentid;
+           pastcurrent.classList.add("ContentSection")
+           currentid=document.getElementById("sec"+x)
+           currentid.classList.remove("ContentSection_none")
+           currentid.classList.add("ContentSection_c")
+        }
+    </script> -->
+    
     <style>
         :root{
             --activebgcolor:rgb(75, 75, 75);
